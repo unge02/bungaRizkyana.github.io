@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>autobiografi</title>
+    <style>
+      :root {
+        --pertama: #a1d6b2;
+        --kedua: #091057;
+        --ketiga: #f1f3c2;
+        --keempat: #e8b86d;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+      }
+      body {
+        background-color: var(--pertama);
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 7%;
+        position: fixed;
+        box-shadow: 0 2px 5px 0;
+        border-bottom: 1px solid var(--kedua);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999999;
+      }
+      .navbar .navbar-logo {
+        color: var(--keempat);
+        font-weight: bold;
+        font-size: 3rem;
+        font-family: Agency FB;
+      }
+      .navbar .navbar-logo span {
+        color: var(--ketiga);
+      }
+      .navbar .navbar-nav {
+        font-family: "Agency FB";
+        font-size: 18px;
+      }
+      .navbar .navbar-nav a {
+        font-weight: bold;
+        display: inline-block;
+        color: var(--ketiga);
+        padding: 10px;
+        margin: 0 1rem;
+        text-decoration: none;
+      }
+      .navbar .navbar-nav a:hover {
+        color: var(--kedua);
+      }
+      .navbar .navbar-nav a::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--kedua);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+      }
+      .navbar .navbar-nav a:hover::after {
+        transform: scaleX(1);
+      }
+      .navbar img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+      }
+      /* card bagian home */
+      .home {
+        padding: 7rem 7% 1.4rem;
+      }
+      .home .row {
+        display: flex;
+        color: var(--ketiga);
+        background-color: var(--kedua);
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+      }
+      .home .row .content {
+        flex: 1 1 35rem;
+        padding: 0 1rem;
+      }
+      .home .row .content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--kedua);
+      }
+      .home .row .content p {
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 200;
+        line-height: 1.6;
+      }
+      .home .row .home-img {
+        flex: 1;
+        position: relative;
+      }
+      .home .row .home-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0)
+        );
+      }
+      /* card bagian tentang */
+      .tentang {
+        padding: 7rem 7% 1.4rem;
+      }
+      .tentang .row-tentang {
+        display: flex;
+        background-color: var(--ketiga);
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+      }
+      .tentang .row-tentang .content-tentang {
+        flex: 1 1 35rem;
+        padding: 0 1rem;
+      }
+      .tentang .row-tentang .content-tentang h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--ketiga);
+      }
+      .tentang .row-tentang .content-tentang p {
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 200;
+        line-height: 1.6;
+      }
+      .tentang .row-tentang .tentang-img {
+        flex: 1;
+        position: relative;
+      }
+      .tentang .row-tentang .tentang-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* card bagian pendidikan */
+      .pendidikan {
+        padding: 7rem 7% 1.4rem;
+      }
+      .pendidikan .row-pendidikan {
+        display: flex;
+        background-color: var(--keempat);
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+      }
+      .pendidikan .row-pendidikan .content-pendidikan {
+        flex: 1 1 35rem;
+        padding: 0 1rem;
+      }
+      .pendidikan .row-pendidikan .content-pendidikan h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--ketiga);
+      }
+      .pendidikan .row-pendidikan .content-pendidikan p {
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 200;
+        line-height: 1.6;
+      }
+      .pendidikan .row-pendidikan .pendidikan-img {
+        flex: 1;
+        position: relative;
+      }
+      .pendidikan .row-pendidikan .pendidikan-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ini bagian navbar -->
+    <nav class="navbar">
+      <div class="navbar-logo">Auto<span>Biografi</span></div>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#pendidikan">Pendidikan</a>
+      </div>
+      <img src="IMG_pict.JPG" />
+    </nav>
+    <!-- ini end navbar -->
+
+    <!-- section card home start -->
+    <section id="home" class="home">
+      <div class="row">
+        <div class="content">
+          <h2>Home</h2>
+          <p>
+            <b
+              >Halo! Selamat datang di Blog Pribadiku. Perkenalkan saya Bunga
+              Dwi Rizkyana
+            </b>
+          </p>
+          <p>
+            Saya mahasiswa dari kampus LP3I Cirebon dan prodi saya Manajemen
+            Informatika.
+          </p>
+          <p>Berikut Biodataku;</p>
+          <p>Nama : Bunga Dwi Rizkyana</p>
+          <p>Kelas : AB1.1</p>
+          <p>Prodi : Manajemen Informatika</p>
+          <p>TTL : Kuningan, 07 Februari 2006</p>
+          <p>Alamat : Desa Cikeusal, Cimahi, Kuningan</p>
+          <p>Jenis Kelamin : Perempuan</p>
+          <p>Agama : Islam</p>
+        </div>
+        <div class="home-img">
+          <img src="IMG_pict.JPG" />
+        </div>
+      </div>
+    </section>
+    <!-- section card home end -->
+
+    <!-- section card tentang start -->
+    <section id="tentang" class="tentang">
+      <div class="row-tentang">
+        <div class="content-tentang">
+          <h2>Tentang</h2>
+          <p>
+            Bunga Dwi Rizkyana adalah nama lengkap saya. Namun, teman-teman
+            lebih akrab memanggil saya Bunga, sedangkan orang terdekat sering
+            menyebut saya Unge. Lahir di Kuningan pada 7 Februari 2006, saya
+            menghabiskan sebagian besar hidup saya di Bandung. Saya anak kedua
+            dari 2 bersaudara, kami berasal dari keluarga sederhana.
+          </p>
+          <p>
+            Kehidupan nomaden seakan melekat pada diri saya. Dari Bandung di
+            usia dini, lalu saya kembali ke Kuningan untuk mengecap pendidikan
+            dasar. Namun, di persimpangan antara SMP dan SMA, saya dihadapkan
+            pada pilihan yang sulit, kota metropolitan dengan segala keriuhannya
+            atau kampung halaman yang penuh nostalgia. Setelah menimbang
+            berbagai faktor, saya memilih untuk kembali ke Kuningan dan
+            melanjutkan pendidikan di sana.
+          </p>
+          <p>
+            Sejak kecil, dunia buku telah menjadi sahabat karib saya. Membaca
+            berbagai cerita menarik adalah kesenangan tersendiri. Namun, hasrat
+            yang lebih besar justru muncul ketika saya mulai menuangkan
+            imajinasi ke dalam tulisan. Menulis adalah cara saya untuk
+            mengekspresikan diri dan berbagi cerita dengan orang lain. Selain
+            menuangkan pikiran melalui tulisan, musik juga menjadi bagian
+            penting dalam hidup saya. Didukung oleh lingkungan keluarga yang
+            seniman, sejak kecil saya sudah akrab dengan dunia musik.
+            Ketertarikan pada piano pun tumbuh seiring berjalannya waktu,
+            meskipun saya tidak menguasainya secara profesional.
+          </p>
+        </div>
+        <div class="tentang-img">
+          <img src="IMG_pict4.jpg" />
+        </div>
+      </div>
+    </section>
+    <!-- section card tentang end -->
+
+    <!-- section card pendidikan start -->
+    <section id="pendidikan" class="pendidikan">
+      <div class="row-pendidikan">
+        <div class="content-pendidikan">
+          <h2>Pendidikan</h2>
+          <p>Paud : ANNISA Bandung</p>
+          <p>TK : Manbaul Huda</p>
+          <p>SD : SDN 2 Cikeusal</p>
+          <p>SMP : Yayasan Atikan Sunda Bandung</p>
+          <p>SMA : MAN 2 Kuningan</p>
+          <p>
+            Prestasi akademik dan non-akademik selalu menjadi fokus saya sejak
+            dini. Dimulai dari juara 2 lomba mewarnai di PAUD hingga konsisten
+            meraih peringkat tinggi di SD, saya terus mengasah kemampuan. Selain
+            itu, saya aktif dalam berbagai organisasi sekolah, bahkan dipercaya
+            menjadi ketua pramuka dan UKS. Puncak prestasi saya adalah meraih
+            medali emas pada Olimpiade Prominensa bidang Kebumian. Pengalaman
+            organisasi dan prestasi akademik ini mengantarkan saya pada
+            kesempatan mengikuti Seleksi Nasional Berdasarkan Prestasi (SNBP).
+          </p>
+        </div>
+        <div class="pendidikan-img">
+          <img src="IMG_pict3.jpg" />
+        </div>
+      </div>
+    </section>
+    <!-- section card pendidikan end -->
+  </body>
+</html>

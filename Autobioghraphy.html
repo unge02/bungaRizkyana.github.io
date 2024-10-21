@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoBiografi</title>
+    <style>
+      :root {
+        --pertama: #a2d2df;
+        --kedua: #f6efbd;
+        --ketiga: #e4c087;
+        --keempat: #bc7c7c;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+      }
+      body {
+        background-color: var(--pertama);
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 7%;
+        /* background-color: var(--kedua); */
+        /* border-bottom: 1px solid var(--ketiga); */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999999;
+      }
+      .navbar .navbar-logo {
+        color: var(--keempat);
+        font-weight: bold;
+        font-size: 3rem;
+        font-family: Agency FB;
+      }
+      .navbar .navbar-logo span {
+        color: var(--ketiga);
+      }
+      .navbar .navbar-nav {
+        float: left;
+        margin-left: 100px;
+        padding-top: 25px;
+        font-family: "Agency FB";
+        font-size: 18px;
+      }
+      .navbar .navbar-nav a {
+        font-weight: bold;
+        color: var(--ketiga);
+        padding: 10px;
+        margin: 0 1rem;
+        text-decoration: none;
+        /* transition: 0.5s; */
+      }
+      .navbar .navbar-nav a:hover {
+        color: var(--pertama);
+      }
+      .navbar .navbar-nav a::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--pertama);
+        transition: 0.3s linear;
+        transform: scaleX(0);
+      }
+      .navbar.navbar-nav a:hover::after {
+        transform: scaleX(1);
+      }
+      .bingkai {
+        margin-top: 12px;
+        float: right;
+        margin-right: 50px;
+        width: 45px;
+        height: 45px;
+        border: 1px solid white;
+        border-radius: 40px;
+      }
+      .img_logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 40px;
+      }
+      .img_content {
+        float: right;
+        width: 250px;
+        height: 320px;
+      }
+      .content {
+        font-size: 18px;
+        text-align: justify;
+        font-family: Agency FB;
+        margin-top: 40px;
+        width: 80%;
+        box-shadow: 2px 4px 3px 1px;
+        height: 55%;
+        float: left;
+        margin-left: 130px;
+        background: #e3e3f2;
+      }
+      .judul {
+        float: left;
+        font-family: Agency FB;
+        width: auto;
+        height: 40px;
+        margin-left: 20px;
+      }
+      .gbrcont {
+        width: 250px;
+        height: 220px;
+        margin-top: 20px;
+        padding-bottom: 100px;
+        float: right;
+        margin-right: 20px;
+      }
+      .tombol {
+        padding-top: 15px;
+        font-weight: bold;
+        text-align: center;
+        background-color: red;
+        font-family: Agency FB;
+        font-size: 19px;
+        color: white;
+        width: 120px;
+        height: 35px;
+      }
+      .tombol a {
+        color: white;
+        background-color: red;
+      }
+      .tombol a:hover {
+        text-decoration: none;
+        color: white;
+        padding-left: 10%;
+      }
+      .footer {
+        border: 1px solid none;
+        float: none;
+        margin-top: 885px;
+        background-color: #e3e6f0;
+        width: 100%;
+        height: 60px;
+        font-family: Agency FB;
+        font-size: 20px;
+      }
+      .text {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ini bagian navbar -->
+    <!-- <header class="header"> -->
+    <nav class="navbar">
+      <div class="navbar-logo">Auto<span>Biografi</span></div>
+      <div class="navbar-nav">
+        <a href="#home" class="back">Home</a>
+        <a href="#tentang" class="back">Tentang</a>
+        <a href="#pendidikan" class="back">Pendidikan</a>
+      </div>
+      <img src="IMG_pict.JPG" class="bingkai img_logo" />
+    </nav>
+    <!-- </header> -->
+    <!-- ini end navbar -->
+
+    <!-- section pertama home -->
+    <section class="content" id="home">
+      <div class="judul">
+        <h1>Home</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          qui vel impedit ipsa esse voluptate iure ratione corporis pariatur
+          inventore, molestiae quia magni velit odit amet eveniet? Fugiat, nisi
+          ipsam. Inventore saepe ad illum facilis temporibus exercitationem, id
+          necessitatibus quae, modi dolor pariatur architecto! Culpa magnam eius
+          non esse dicta aperiam quae possimus vel, odit iure? Facere nemo omnis
+          odit. Placeat quisquam ipsam provident quis iusto vitae odit laborum
+          quod veniam facilis. Perferendis exercitationem vero hic fugit, unde
+          commodi error ducimus reprehenderit, modi, quod nostrum. Eligendi
+          neque assumenda dicta asperiores. Molestias dicta fugiat fugit culpa
+          cum laborum quisquam natus maxime. Dolorum quod ad quae blanditiis.
+          Voluptas ea sed, quas culpa aliquid sunt consectetur molestias?
+          Eligendi deleniti assumenda impedit molestias et. Ipsam atque
+          consequatur tempora quasi deserunt nulla neque, ex ipsa reprehenderit
+          minima tempore numquam a delectus autem nisi dolores eligendi, maxime
+          cumque sed quibusdam. Quod perspiciatis aspernatur minus corrupti
+          culpa.
+        </p>
+      </div>
+      <div class="gbrcont">
+        <img src="IMG_pict2.jpg" class="img_content" />
+      </div>
+    </section>
+    <!-- section kedua tentang  -->
+    <section class="content" id="tentang">
+      <div class="judul">
+        <h1>Tentang</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          qui vel impedit ipsa esse voluptate iure ratione corporis pariatur
+          inventore, molestiae quia magni velit odit amet eveniet? Fugiat, nisi
+          ipsam. Inventore saepe ad illum facilis temporibus exercitationem, id
+          necessitatibus quae, modi dolor pariatur architecto! Culpa magnam eius
+          non esse dicta aperiam quae possimus vel, odit iure? Facere nemo omnis
+          odit. Placeat quisquam ipsam provident quis iusto vitae odit laborum
+          quod veniam facilis. Perferendis exercitationem vero hic fugit, unde
+          commodi error ducimus reprehenderit, modi, quod nostrum. Eligendi
+          neque assumenda dicta asperiores. Molestias dicta fugiat fugit culpa
+          cum laborum quisquam natus maxime. Dolorum quod ad quae blanditiis.
+          Voluptas ea sed, quas culpa aliquid sunt consectetur molestias?
+          Eligendi deleniti assumenda impedit molestias et. Ipsam atque
+          consequatur tempora quasi deserunt nulla neque, ex ipsa reprehenderit
+          minima tempore numquam a delectus autem nisi dolores eligendi, maxime
+          cumque sed quibusdam. Quod perspiciatis aspernatur minus corrupti
+          culpa.
+        </p>
+      </div>
+      <div class="gbrcont">
+        <img src="IMG_pict2.jpg" class="img_content" />
+      </div>
+    </section>
+    <!-- section ketiga pendidikan -->
+    <section class="content" id="pendidikan">
+      <div class="judul">
+        <h1>Pendidikan</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          qui vel impedit ipsa esse voluptate iure ratione corporis pariatur
+          inventore, molestiae quia magni velit odit amet eveniet? Fugiat, nisi
+          ipsam. Inventore saepe ad illum facilis temporibus exercitationem, id
+          necessitatibus quae, modi dolor pariatur architecto! Culpa magnam eius
+          non esse dicta aperiam quae possimus vel, odit iure? Facere nemo omnis
+          odit. Placeat quisquam ipsam provident quis iusto vitae odit laborum
+          quod veniam facilis. Perferendis exercitationem vero hic fugit, unde
+          commodi error ducimus reprehenderit, modi, quod nostrum. Eligendi
+          neque assumenda dicta asperiores. Molestias dicta fugiat fugit culpa
+          cum laborum quisquam natus maxime. Dolorum quod ad quae blanditiis.
+          Voluptas ea sed, quas culpa aliquid sunt consectetur molestias?
+          Eligendi deleniti assumenda impedit molestias et. Ipsam atque
+          consequatur tempora quasi deserunt nulla neque, ex ipsa reprehenderit
+          minima tempore numquam a delectus autem nisi dolores eligendi, maxime
+          cumque sed quibusdam. Quod perspiciatis aspernatur minus corrupti
+          culpa.
+        </p>
+      </div>
+      <div class="gbrcont">
+        <img src="IMG_pict2.jpg" class="img_content" />
+      </div>
+    </section>
+  </body>
+</html>
